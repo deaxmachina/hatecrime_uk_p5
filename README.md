@@ -10,4 +10,5 @@
 [separate repository](https://github.com/deaxmachina/hatecrime_uk_data)
 including data sources, analysis, data prep, simple visualisations, as well as a discussion about the different datasets. 
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/192110190@N06/51333606003/in/dateposted-public/" title="hate-crime-circles"><img src="https://live.staticflickr.com/65535/51333606003_2857d9d98e_o.png" width="1000" alt="Screenshot 2021-07-25 at 15.34.08"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/192110190@N06/51333606003/in/dateposted-public/" title="hate-crime-circles"><img src="https://live.staticflickr.com/65535/51333606003_2857d9d98e_o.png" width="900" alt="Screenshot 2021-07-25 at 15.34.08"></a>
