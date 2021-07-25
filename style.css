@@ -20,6 +20,8 @@ body, * {
 body {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
 }
 
 canvas {
@@ -102,14 +104,11 @@ canvas {
 }
 
 #footnote {
-  /*position: absolute;*/
-  /*top: 100vh;*/
   line-height: 1.7;
   color: var(--white-colour);
   width: 90%;
   left: 5%;
   padding-bottom: 20px;
-  border-top: 10px solid #000;
 }
 
 #footnote h3 {

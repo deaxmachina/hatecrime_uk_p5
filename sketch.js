@@ -23,7 +23,7 @@ function preload() {
 function windowResized() {
   resizeCanvas(window.innerWidth, window.innerHeight);
 
-  if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 900) {
+  if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 1000) {
     background(10)
   } else {
     image(img, -window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
@@ -65,7 +65,7 @@ function setup() {
   frameRate(25);
   angleMode(DEGREES)
   
-  if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 900) {
+  if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 1000) {
     background(10)
   } else {
     image(img, 0, 0, width, height)
