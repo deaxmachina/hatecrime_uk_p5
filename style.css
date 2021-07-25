@@ -16,6 +16,12 @@ html, body {
 body, * {
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 canvas {
   position: relative;
 }
@@ -96,8 +102,8 @@ canvas {
 }
 
 #footnote {
-  position: absolute;
-  top: 100vh;
+  /*position: absolute;*/
+  /*top: 100vh;*/
   line-height: 1.7;
   color: var(--white-colour);
   width: 90%;
@@ -141,12 +147,6 @@ canvas {
 /**********************************************************************/
 /****************************** Media Queries *************************/
 /**********************************************************************/
-
-@media(orientation: portrait) {
-  #footnote {
-    top: 100vw;
-  }
-}
 
 @media(min-width: 1200px) {
   #footnote {
