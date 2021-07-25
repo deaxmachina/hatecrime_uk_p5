@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  justify-content: center;
 }
 
 canvas {
@@ -137,7 +136,6 @@ canvas {
 }
 
 .footnote-concept-positive {
-  /*background-color: rgb(71, 148, 148);*/
   box-shadow: 0px 0px 20px 2px rgb(46, 87, 87);
   border-radius: 20px;
 }

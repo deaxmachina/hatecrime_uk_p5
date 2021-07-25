@@ -13,7 +13,6 @@ let maxRad = Math.min(
 let yearsContainer;
 let yearsInContainer = []; 
 
-
 // load the background image 
 function preload() {
   img = loadImage('bg13.png')
@@ -21,15 +20,13 @@ function preload() {
 
 // to make it responsive
 function windowResized() {
-  
+  resizeCanvas(window.innerWidth, window.innerHeight);
+  // if on smaller screen and portrait, don't use bg image 
   if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 1000) {
     background(10)
   } else {
     image(img, -window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
   }
-  resizeCanvas(window.innerWidth, window.innerHeight);
-
-  
 }
 
 function setup() {
@@ -55,7 +52,7 @@ function setup() {
   const projectSubtitle = createElement('h2', 'Racist and Religious Hate Crime in London')
   projectSubtitle.addClass('project-subtitle')
   projectSubtitle.parent(heroContainer)
-  const projectExplain = createElement('small', '* Best viewed on bigger display. Meaning of visualisation and project concept -> ')
+  const projectExplain = createElement('small', '* Best viewed on desktop. Meaning of data and project concept -> ')
   projectExplain.addClass('project-explain')
   projectExplain.parent(heroContainer)
   const projectExplainLink = createA('#footnote', 'go to bottom')
@@ -65,12 +62,11 @@ function setup() {
   frameRate(25);
   angleMode(DEGREES)
   
-  if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 1000) {
-    background(10)
-  } else {
+  // if on smaller screen and portrait, don't use bg image 
+  background(10)
+  if (window.innerHeight < window.innerWidth*1.3 && window.innerWidth > 1000) {
     image(img, 0, 0, width, height)
   }
-  
   
   // create all the Circles in advance
   for (const dataPoint of maxPacking) {
@@ -80,16 +76,15 @@ function setup() {
       dataPoint.r, 
       random(-1, 1)))
   }
+  // set start year
   year = 2010; 
-
 }
 
 
 function draw() {
   translate(width/2, height/2)
   
-  // fill a perlin noise shape in the middle where the circle 
-  // packing will be drawn
+  // fill a perlin noise shape in the middle where the circle packing will be drawn
   push()
   beginShape()
   angleMode(RADIANS)
@@ -106,8 +101,8 @@ function draw() {
   endShape(CLOSE)
   pop()
 
-  // draw the perlin noise circles; moving gently over time 
-  // via the zoffset; coloured light blue-green hues
+  // draw the perlin noise circles; moving gently over time via the zoffset; 
+  // coloured light blue-green hues
   push()
   beginShape()
   angleMode(RADIANS)
@@ -119,11 +114,9 @@ function draw() {
     let y = r * sin(a);
     curveVertex(x, y);
   }
-  //stroke(255, 255, 255, 20)
   stroke(random(255), 255, 255, 20)
   strokeWeight(2)
   noFill()
-  //fill(20)
   endShape(CLOSE)
   zoff+=0.01
   pop()
