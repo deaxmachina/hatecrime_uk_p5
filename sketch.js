@@ -16,7 +16,6 @@ let yearsInContainer = [];
 
 // load the background image 
 function preload() {
-  img = loadImage('bggrey.jpeg')
   img = loadImage('bg13.png')
 }
 
@@ -46,12 +45,15 @@ function setup() {
   const projectTitle = createElement('h1', `I don't like you...`)
   projectTitle.addClass('project-title')
   projectTitle.parent(heroContainer)
-  const projectSubtitle = createElement('h2', 'race and religion hate crime in London')
+  const projectSubtitle = createElement('h2', 'Racist and Religious Hate Crime in London')
   projectSubtitle.addClass('project-subtitle')
   projectSubtitle.parent(heroContainer)
-  const projectExplain = createElement('h3', '* meaning of visualisation and project concept')
+  const projectExplain = createElement('small', '* For meaning of visualisation and project concept, ')
   projectExplain.addClass('project-explain')
   projectExplain.parent(heroContainer)
+  const projectExplainLink = createA('#footnote', 'go to bottom')
+  projectExplainLink.addClass('project-explain-link')
+  projectExplainLink.parent(heroContainer)
 
   // create container and elements for the footnotes after the main visual 
   // const footnotesDiv = createDiv("Here will be the text with more explanation about the data, methodology, links etc");
