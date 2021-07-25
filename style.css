@@ -142,6 +142,12 @@ canvas {
 /****************************** Media Queries *************************/
 /**********************************************************************/
 
+@media(orientation: portrait) {
+  #footnote {
+    top: 100vw;
+  }
+}
+
 @media(min-width: 1200px) {
   #footnote {
     display: flex;

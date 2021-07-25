@@ -22,7 +22,14 @@ function preload() {
 // to make it responsive
 function windowResized() {
   resizeCanvas(window.innerWidth, window.innerHeight);
-  image(img, -window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
+
+  if (window.innerHeight > window.innerWidth && window.innerWidth < 800) {
+    background(10)
+  } else {
+    image(img, -window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
+  }
+
+  
 }
 
 function setup() {
@@ -55,14 +62,15 @@ function setup() {
   projectExplainLink.addClass('project-explain-link')
   projectExplainLink.parent(heroContainer)
 
-  // create container and elements for the footnotes after the main visual 
-  // const footnotesDiv = createDiv("Here will be the text with more explanation about the data, methodology, links etc");
-  // footnotesDiv.addClass('footnotes')
-
-    frameRate(20);
+  frameRate(25);
   angleMode(DEGREES)
-  //imageMode(CENTER)
-  image(img, 0, 0, width, height)
+  
+  if (window.innerHeight > window.innerWidth && window.innerWidth < 800) {
+    background(10)
+  } else {
+    image(img, 0, 0, width, height)
+  }
+  
   
   // create all the Circles in advance
   for (const dataPoint of maxPacking) {
