@@ -21,13 +21,13 @@ function preload() {
 
 // to make it responsive
 function windowResized() {
-  resizeCanvas(window.innerWidth, window.innerHeight);
-
+  
   if (window.innerHeight > window.innerWidth*1.3 && window.innerWidth < 1000) {
     background(10)
   } else {
     image(img, -window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
   }
+  resizeCanvas(window.innerWidth, window.innerHeight);
 
   
 }
@@ -55,7 +55,7 @@ function setup() {
   const projectSubtitle = createElement('h2', 'Racist and Religious Hate Crime in London')
   projectSubtitle.addClass('project-subtitle')
   projectSubtitle.parent(heroContainer)
-  const projectExplain = createElement('small', '* For meaning of visualisation and project concept, ')
+  const projectExplain = createElement('small', '* Best viewed on bigger display. Meaning of visualisation and project concept -> ')
   projectExplain.addClass('project-explain')
   projectExplain.parent(heroContainer)
   const projectExplainLink = createA('#footnote', 'go to bottom')
